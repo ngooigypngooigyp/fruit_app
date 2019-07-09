@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../Search.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -7,25 +8,39 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int countNum = 0;
   @override
   Widget build(BuildContext context) {
     return Column(
-       children: <Widget>[
-         SizedBox(height: 200),
-         Chip(
-           label: Text('${this.countNum}'),
-         ),
-         SizedBox(height: 200),
-         RaisedButton(
-           child: Text('按钮'),
-           onPressed: (){
-             setState((){
-               this.countNum++;
-             });
-           },
-         )
-       ],
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        RaisedButton(
+          child: Text('跳转到搜索页面'),
+          onPressed: (){
+            // Navigator.of(context).push(
+            //   MaterialPageRoute(
+            //      builder: (context)=>SearchPage()
+            //   ),
+            // );
+            Navigator.pushNamed(context, '/search');
+          },
+          color: Theme.of(context).accentColor,
+          textTheme: ButtonTextTheme.primary,
+        ),
+        SizedBox(height: 20,),
+        RaisedButton(
+          child: Text('ww'),
+          onPressed: (){
+            // Navigator.of(context).push(
+            //   MaterialPageRoute(
+            //      builder: (context)=>SearchPage()
+            //   ),
+            // );
+          },
+          color: Theme.of(context).accentColor,
+          textTheme: ButtonTextTheme.primary,
+        ),
+      ],
     );
   }
 }

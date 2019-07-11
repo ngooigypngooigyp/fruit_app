@@ -6,33 +6,59 @@ class AppBarDemoPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.red,
-        centerTitle: true,
-        title: Text('AppBarDemoPage'),
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: (){
-            print('menu');
-          },
-        ),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.search),
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.red,
+          centerTitle: true,
+          title: Text('AppBarDemoPage'),
+          leading: IconButton(
+            icon: Icon(Icons.menu),
             onPressed: (){
-              print('search');
+              print('menu');
             },
           ),
-          IconButton(
-            icon: Icon(Icons.settings),
-            onPressed: (){
-              print('settings');
-            },
-          ), 
-        ],
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: (){
+                print('search');
+              },
+            ), 
+          ],
+          bottom: TabBar(
+            tabs: <Widget>[
+              Tab(text:'热门'),
+              Tab(text: '时尚',)
+            ],
+          ),
+        ),
+        body: TabBarView(
+          children: <Widget>[
+            ListView(
+              children: <Widget>[
+                ListTile(
+                  title: Text('第一个Tab')
+                ),
+                ListTile(
+                  title: Text('第一个Tab')
+                ),
+              ],
+            ),
+            ListView(
+              children: <Widget>[
+                ListTile(
+                  title: Text('第二个Tab')
+                ),
+                ListTile(
+                  title: Text('第二个Tab')
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
-      body: Text('1111'),
     );
   }
 }

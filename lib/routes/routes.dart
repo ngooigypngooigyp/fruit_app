@@ -8,6 +8,7 @@ import '../pages/productInfo.dart';
 import '../pages/user/Login.dart';
 import '../pages/user/RegisterFirst.dart';
 import '../pages/user/RegisterSecond.dart';
+import '../pages/user/RegisterThird.dart';
 
 
 //配置路由
@@ -20,6 +21,7 @@ final routes = {
   '/login':(context)=>LoginPage(),
   '/registerFirst':(context)=>RegisterFirstPage(),
   '/registerSecond':(context)=>RegisterSecondPage(),
+  '/registerThird':(context)=>RegisterThirdPage(),
 };
 
 //固定写法

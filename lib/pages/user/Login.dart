@@ -17,6 +17,7 @@ class LoginPage extends StatelessWidget {
             RaisedButton(
               child: Text('登陆'),
               onPressed: (){
+                Navigator.of(context).pop();
 
               },
             )

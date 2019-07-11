@@ -5,8 +5,25 @@ class RegisterSecondPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('登录2'),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('第二步-请输入验证码'),
+      ),
+      body: Column(
+        children: <Widget>[
+          SizedBox(height: 40),
+          Text('请输入验证码'),
+          RaisedButton(
+            child: Text('下一步'),
+            onPressed: (){
+              Navigator.pushNamed(context, '/registerThird');
+              
+              //替换路由
+              // Navigator.of(context).pushReplacementNamed('/registerThird');
+            },
+          )
+        ],
+      )    
     );
   }
 }

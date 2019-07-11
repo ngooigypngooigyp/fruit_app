@@ -19,7 +19,7 @@ class RegisterThirdPage extends StatelessWidget {
             onPressed: (){
               //返回根
               Navigator.of(context).pushAndRemoveUntil(
-                new MaterialPageRoute(builder: (context)=> new Tabs()),
+                new MaterialPageRoute(builder: (context)=> new Tabs(index: 2)),
                 (route) =>route == null
               );
 

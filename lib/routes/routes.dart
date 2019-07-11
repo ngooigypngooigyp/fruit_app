@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/AppBarDemo.dart';
 import '../pages/Form.dart';
 import '../pages/Search.dart';
 import '../pages/Tabs.dart';
@@ -9,6 +10,8 @@ import '../pages/user/Login.dart';
 import '../pages/user/RegisterFirst.dart';
 import '../pages/user/RegisterSecond.dart';
 import '../pages/user/RegisterThird.dart';
+
+
 
 
 //配置路由
@@ -22,6 +25,7 @@ final routes = {
   '/registerFirst':(context)=>RegisterFirstPage(),
   '/registerSecond':(context)=>RegisterSecondPage(),
   '/registerThird':(context)=>RegisterThirdPage(),
+  '/appBarDemo':(context)=>AppBarDemoPage(),
 };
 
 //固定写法

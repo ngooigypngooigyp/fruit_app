@@ -40,6 +40,20 @@ class _HomePageState extends State<HomePage> {
           color: Theme.of(context).accentColor,
           textTheme: ButtonTextTheme.primary,
         ),
+        SizedBox(height: 20,),
+        RaisedButton(
+          child: Text('跳转到appBarDemo'),
+          onPressed: (){
+            // Navigator.of(context).push(
+            //   MaterialPageRoute(
+            //      builder: (context)=>SearchPage()
+            //   ),
+            // );
+            Navigator.pushNamed(context, '/appBarDemo');
+          },
+          color: Theme.of(context).accentColor,
+          textTheme: ButtonTextTheme.primary,
+        ),
       ],
     );
   }

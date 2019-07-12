@@ -10,6 +10,7 @@ import '../pages/user/Login.dart';
 import '../pages/user/RegisterFirst.dart';
 import '../pages/user/RegisterSecond.dart';
 import '../pages/user/RegisterThird.dart';
+import '../pages/TabBarController.dart';
 
 
 
@@ -26,6 +27,7 @@ final routes = {
   '/registerSecond':(context)=>RegisterSecondPage(),
   '/registerThird':(context)=>RegisterThirdPage(),
   '/appBarDemo':(context)=>AppBarDemoPage(),
+  '/tabBarController':(context)=>TabBarControllerPage(),
 };
 
 //固定写法

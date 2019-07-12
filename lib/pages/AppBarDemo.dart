@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 
 class AppBarDemoPage extends StatelessWidget {
@@ -10,7 +11,7 @@ class AppBarDemoPage extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.blue,
           centerTitle: true,
           title: Text('AppBarDemoPage'),
           leading: IconButton(
@@ -28,6 +29,9 @@ class AppBarDemoPage extends StatelessWidget {
             ), 
           ],
           bottom: TabBar(
+            indicatorPadding: EdgeInsets.all(1),
+            indicatorColor: Colors.red,
+            labelColor: Colors.red,
             tabs: <Widget>[
               Tab(text:'热门'),
               Tab(text: '时尚',)

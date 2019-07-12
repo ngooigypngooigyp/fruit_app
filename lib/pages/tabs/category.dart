@@ -18,6 +18,7 @@ class _CategoryPageState extends State<CategoryPage> {
             children: <Widget>[
               Expanded(
                 child: TabBar(
+                  isScrollable: true,
                   indicatorColor: Colors.red,
                   labelColor: Colors.red,
                   unselectedLabelColor: Colors.white,
